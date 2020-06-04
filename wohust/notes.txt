@@ -1,0 +1,192 @@
+ <?php if ( have_posts() ) : ?>
+                            <?php while ( have_posts() ) : the_post(); ?>
+                              <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                <div class="post-header">
+                                   <div class="date"><?php the_time( 'M j y' ); ?></div>
+                                   <h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+                                   <div class="author"><?php the_author(); ?></div>
+                                </div><!--end post header-->
+                                <div class="entry clear">
+                                   <?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?>
+                                   <?php the_content(); ?>
+                                   <?php edit_post_link(); ?>
+                                   <?php wp_link_pages(); ?> </div>
+                                <!--end entry-->
+                                <div class="post-footer">
+                                   <div class="comments"><?php comments_popup_link( 'Leave a Comment', '1 Comment', '% Comments' ); ?></div>
+                                </div><!--end post footer-->
+                                </div><!--end post-->
+                            <?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
+                                <div class="navigation index">
+                                   <div class="alignleft"><?php next_posts_link( 'Older Entries' ); ?></div>
+                                   <div class="alignright"><?php previous_posts_link( 'Newer Entries' ); ?></div>
+                                </div><!--end navigation-->
+                            <?php else : ?>
+                            <?php endif; ?>
+
+
+<?php get_header(); ?>
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
+
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl Theme Default CSS -->
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+
+
+
+ <!-- Jquery Slim JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Meanmenu JS -->
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <!-- Wow JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="assets/js/owl.carousel.js"></script>
+    <!-- Nice Select JS -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- Form Validator JS -->
+    <script src="assets/js/form-validator.min.js"></script>
+    <!-- Contact JS -->
+    <script src="assets/js/contact-form-script.js"></script>
+    <!-- Map JS FILE -->
+    <script src="assets/js/map.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js"></script>
+
+
+
+ <!-- Start Client  Area -->
+    <section class="client-area client-area-four pt-100">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Client Say</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ipsum suspendisse.</p>
+            </div>
+            <div class="row">
+                <div class="client-wrap-two owl-carousel owl-theme">
+                    <div class="single-client">
+                        <img src="<?php bloginfo('template_directory');?>/assets/img/client/client-img-one.jpg" alt="Image">
+                        <h3>Denial Peer</h3>
+                        <span>Designer</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <ul>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-client">
+                        <img src="<?php bloginfo('template_directory');?>/assets/img/client/client-img-two.jpg" alt="Image">
+                        <h3>Juhon Dew</h3>
+                        <span>Developer</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <ul>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-client">
+                        <img src="<?php bloginfo('template_directory');?>/assets/img/client/client-img-three.jpg" alt="Image">
+                        <h3>Jon Smith</h3>
+                        <span>UI UX Designer</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <ul>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-client">
+                        <img src="<?php bloginfo('template_directory');?>/assets/img/client/client-img-four.jpg" alt="Image">
+                        <h3>Dath Smith Peer</h3>
+                        <span>Designer</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <ul>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                            <li>
+                                <i class="bx bxs-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape shape-ome">
+            <img src="<?php bloginfo('template_directory');?>/assets/img/shape/client.png" alt="Image">
+        </div>
+    </section>
+    <!-- End Client  Area -->
